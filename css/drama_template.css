@@ -1,0 +1,1377 @@
+@charset "UTF-8";
+
+/* Fuji Drama Template ver1.0 */
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////
+ Common
+ bodyタグ、背景、メニュー、基本レイアウト
+/////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ========================================================
+ Base
+ ======================================================== */
+
+/* 文字サイズ10px相当 */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background: white;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 40%;
+  }
+
+  body {
+    /* -----------★変更★-----------*/
+    line-height: 1.5;
+    font-size: 1.5rem;
+
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#cx_spContentsWrap, #fp-wrap {
+  min-width: 100% !important;
+  width: 100% !important;
+}
+
+.cx_touchdevice #cx_spContentsWrap {
+  min-width: 1200px !important;
+}
+
+.cx_touchdevice #fp-wrap {
+  width: 100% !important;
+  min-width: 1000px !important;
+}
+
+.cx_smartphoneview.cx_touchdevice #cx_spContentsWrap, .cx_smartphoneview.cx_touchdevice #fp-wrap {
+  min-width: 100% !important;
+  width: 100% !important;
+}
+
+.cx_smartphoneview #fp-wrap {
+  min-width: 100% !important;
+  width: 100% !important;
+}
+
+.cx_smartphoneview #fp-contents {
+  width: 100% !important;
+  margin: 0 auto;
+}
+
+
+/* ========================================================
+  Background
+ ======================================================== */
+
+
+/* トップページ */
+
+#fp-wrap {
+  background-image: url(../photo/furinkinshi_main_bg_pc.png);
+  background-size: 100% auto;
+}
+
+#pc-bg.top {
+  background: #1a1a1a;
+}
+
+/* 下層ページ */
+
+#pc-bg.lower {
+  background: #1a1a1a;
+}
+
+#pc-bg.lower .l-header {
+  height: 240px;
+}
+
+
+/* ========================================================
+  Layout
+ ======================================================== */
+
+#fp-contents {
+  width: auto;
+}
+
+#fp-contents * {
+  box-sizing: border-box;
+}
+
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .inner {
+    width: 100%;
+  }
+}
+
+.l-header, .l-menu, .l-main, .l-mainvisual {
+  position: relative;
+}
+
+.l-mainvisual {
+  background: url(../photo/furinkinshi_header_bg.png);
+  background-size: cover;
+}
+
+.mainvisual a:hover {
+  opacity: 0.6;
+}
+
+.l-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .inner {
+    width: 100%;
+  }
+
+  .l-main {
+    width: 100%;
+    padding: 0 3% 50px;
+  }
+}
+
+/* ========================================================
+  Info
+ ======================================================== */
+
+.info-area {
+  text-align: center;
+  padding: 5px 0;
+}
+
+
+/* ========================================================
+  Menu
+ ======================================================== */
+.pc_chain {
+  padding: 10px 0;
+  display: block;
+}
+
+.sp_chain {
+  padding: 10px 0;
+  display: none;
+}
+
+.pc_chart {
+  display: block;
+}
+
+.sp_chart {
+  display: none;
+}
+
+.box_link {
+  display: inline !important;
+}
+
+.box_link:hover {
+  opacity: 0.6 !important;
+}
+
+.l-menu {
+  background: #1a1a1a;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu__item a {
+  display: block;
+}
+
+.menu__item:not(.is-comingsoon) a:hover {
+  opacity: .9;
+}
+
+
+/* menuが2列の場合 */
+
+.menu--2 .menu__item {
+  width: 50%;
+}
+
+
+/* menuが4列の場合 */
+
+.menu--4 .menu__item {
+  width: 25%;
+}
+
+.menu--4.menu--sp2 .menu__item {
+  width: 25%;
+  height: 100px;
+}
+
+.menu--4.menu--sp2 .menu__item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -10000px;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  background-size: contain;
+  background-position: center;
+}
+
+.menu--4.menu--sp2 .menu__item.nav-intro a {
+  background-image: url(../photo/furinkinshi_nav_introduction.png);
+}
+
+.menu--4.menu--sp2 .menu__item.nav-intro a:hover {
+  opacity: 0.6;
+}
+
+.menu--4.menu--sp2 .menu__item.nav-story a {
+  background-image: url(../photo/furinkinshi_nav_story.png);
+}
+
+.menu--4.menu--sp2 .menu__item.nav-story a:hover {
+  opacity: 0.6;
+}
+
+.menu--4.menu--sp2 .menu__item.nav-chart a {
+  background-image: url(../photo/furinkinshi_nav_chart.png);
+}
+
+.menu--4.menu--sp2 .menu__item.nav-chart a:hover {
+  opacity: 0.6;
+}
+
+.menu--4.menu--sp2 .menu__item.nav-caststaff a {
+  background-image: url(../photo/furinkinshi_nav_caststaff.png);
+}
+
+.menu--4.menu--sp2 .menu__item.nav-caststaff a:hover {
+  opacity: 0.6;
+}
+
+
+/* menuがテキストの場合 */
+
+.menu--default li {
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.menu--default li.is-comingsoon {
+  opacity: .4;
+}
+
+.menu--default a {
+  box-sizing: border-box;
+  height: 80px;
+  padding-top: 20px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.6rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu--default a small {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.menu--4.menu--default a {
+  font-size: 1.4rem;
+}
+
+.menu--4.menu--default a small {
+  font-size: 1.1rem;
+}
+
+.menu--4.menu--default li:nth-child(4n) a, .menu--2.menu--default li:nth-child(2n) a {
+  border-right: none;
+}
+
+.menu--2.menu--default li:nth-child(1) a, .menu--2.menu--default li:nth-child(2) a {
+  border-bottom: 1px solid white;
+}
+
+@media screen and (max-width: 768px) {
+  .pc_chain {
+    display: none;
+  }
+
+  .sp_chain {
+    display: block;
+  }
+
+  .pc_chart {
+    display: none;
+  }
+
+  .sp_chart {
+    display: block;
+  }
+
+  .menu--4.menu--sp2 .menu__item {
+    /* -----------★変更★-----------*/
+    width: 50%;
+    height: 80px;
+  }
+
+  .menu--4.menu--sp2 .menu__item a {
+    /* -----------★変更★-----------*/
+    background-size: 160px;
+  }
+
+  .menu--4.menu--sp2 .menu__item:first-child {
+    border-top: 0;
+    border-left: 0;
+  }
+
+  .menu--4.menu--sp2 .menu__item:nth-child(2) {
+    border-top: 0;
+    border-right: 0;
+  }
+
+  .menu--4.menu--sp2 .menu__item:nth-child(3) {
+    border-bottom: 0;
+    border-left: 0;
+  }
+
+  .menu--4.menu--sp2 .menu__item:nth-child(4) {
+    border-bottom: 0;
+    border-right: 0;
+  }
+
+  .menu--2.menu--sp1 .menu__item {
+    /* -----------★変更★-----------*/
+    width: 100%;
+  }
+
+  .menu--default a {
+    font-size: 1.2rem;
+    line-height: 1em;
+  }
+
+  .menu--default a small {
+    display: block;
+    font-size: 1rem;
+  }
+}
+
+
+/* ========================================================
+ Content
+ ======================================================== */
+
+.content {
+  margin: 30px auto 0;
+  position: relative;
+}
+
+.content__title {
+  position: relative;
+  font-weight: bold;
+  line-height: 1.2em;
+  text-align: center;
+  font-size: 3.4rem;
+}
+
+.content__title small {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.contents_update {
+  color: white;
+  line-height: 1;
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 0px;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+}
+
+.content__title__link {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.content__title__link a {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 5px 15px;
+  margin-top: -15px;
+  border-radius: 2px;
+  height: 30px;
+  color: white;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.content__subtitle {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: white;
+  border-bottom: 1px solid white;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.content__body {
+  margin: 30px 40px 0 40px;
+  padding-bottom: 30px;
+}
+
+.content__collabo {
+  width: 100%;
+  background-image: url(../photo/furinkinshi_header_bg.png);
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .contents_update {
+    /* -----------★変更★-----------*/
+    font-size: 1.2rem;
+    padding: .6rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .content__title__link {
+    position: static;
+  }
+
+  .content__title__link a {
+    margin: 3px;
+    height: auto;
+  }
+
+  .content__body {
+    /* -----------★変更★-----------*/
+    margin: 2rem 1.8rem 0 1.8rem;
+    padding-bottom: 2rem;
+  }
+
+  .content__img {
+    width: 200px;
+  }
+}
+
+
+/* ========================================================
+ linkBtn
+ ======================================================== */
+
+.linkBtn {
+  text-align: center;
+}
+
+.linkBtn a {
+  position: relative;
+  display: inline-block;
+  width: 320px;
+  height: 50px;
+  line-height: 50px;
+  background: white;
+  color: white;
+  border: 1px solid white;
+  transition: .5s;
+}
+
+.linkBtn a:hover {
+  background: white;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .linkBtn a {
+    /* -----------★変更★-----------*/
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+  }
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////
+ Top
+ メインビジュアル、スライダー、グリッド、ニュース一覧、twitter枠、instagram枠、バナー、前作リンク
+/////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ========================================================
+ Notice
+ メインビジュアル内　緊急告知
+ ======================================================== */
+
+.notice {
+  position: absolute;
+  box-sizing: border-box;
+  width: 620px;
+  left: 10px;
+  bottom: 30px;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: 1.4rem;
+}
+
+.l-mainvisual--full .notice {
+  width: 980px;
+}
+
+
+/* ========================================================
+ 公式SNSアカウント
+ ======================================================== */
+
+.official__account {
+  padding-bottom: 20px;
+}
+
+.official__account ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: -10px;
+}
+
+.official__account li {
+  display: table;
+  width: 33.3333%;
+  padding: 0 10px 0 0;
+  margin-bottom: 10px;
+}
+
+.official__account li a {
+  display: table-cell;
+  height: 55px;
+  border: 1px solid white;
+  padding: 10px 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.official__account li span {
+  display: inline-block;
+  position: relative;
+  padding-left: 46px;
+}
+
+.official__account li span::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.official__account li.account-twitter span::before {
+  background: url(../img/icon_twitter.png) top left / contain no-repeat;
+}
+
+.official__account li.account-instagram span::before {
+  background: url(../img/icon_instagram.png) top left / contain no-repeat;
+}
+
+.official__account li.account-line span::before {
+  background: url(../img/icon_line.png) top left / contain no-repeat;
+}
+
+.official__account li.account-facebook span::before {
+  background: url(../img/icon_facebook.png) top left / contain no-repeat;
+}
+
+.official__account li.account-youtube span::before {
+  background: url(../img/icon_youtube.png) top left / contain no-repeat;
+}
+
+.official__account li.account-tiktok span::before {
+  background: url(../img/icon_tiktok.png) top left / contain no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .official__account {
+    /* -----------★変更★-----------*/
+    padding-bottom: 1rem;
+  }
+
+  .official__account ul {
+    width: 100%;
+  }
+
+  .official__account li {
+    /* -----------★変更★-----------*/
+    width: 80%;
+    display: block;
+    padding: 0 0 0 0;
+    margin-bottom: 1rem;
+  }
+
+  .official__account li a {
+    /* -----------★変更★-----------*/
+    height: auto;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    line-height: 1;
+  }
+
+  .official__account li span {
+    /* -----------★変更★-----------*/
+    padding-left: 4rem;
+  }
+
+  .official__account li span::before {
+    /* -----------★変更★-----------*/
+    width: 22px;
+    height: 22px;
+  }
+}
+
+
+/* ========================================================
+ スライダー
+ ======================================================== */
+
+.slider {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+
+.slider * {
+  box-sizing: border-box;
+}
+
+.slider__photo {
+  width: 100%;
+}
+
+.slider__update {
+  margin-top: 0.8rem;
+  color: white;
+  font-size: 90%;
+}
+
+.slider__text {
+  margin-top: 0.4rem;
+  color: #000;
+}
+
+.slider__text p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+}
+
+/*====　↓　swiper　====*/
+/*コンテナの大きさ*/
+.slider .swiper-container {
+  width: 90%;
+  height: 310px;
+}
+
+/*スライド*/
+.slider .swiper-slide {
+  width: 268px;
+  padding: 16px;
+  background-color: #ffe2ee;
+}
+
+/*矢印*/
+.slider .swiper-next, .slider .swiper-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-position: center;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.slider .swiper-prev {
+  background-image: url("../img/slider_prev.png");
+  left: 10px;
+}
+
+.slider .swiper-next {
+  background-image: url("../img/slider_next.png");
+  right: 10px;
+}
+
+.slider .swiper-next.swiper-button-disabled, .slider .swiper-prev.swiper-button-disabled {
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .slider .swiper-container {
+    /* -----------★変更★-----------*/
+    width: 100%;
+    height: auto;
+  }
+
+  .slider .swiper-slide {
+    width: 54%;
+    padding: 4%;
+    height: auto;
+  }
+
+  .slider .swiper-next, .slider .swiper-prev {
+    /* -----------★変更★-----------*/
+    width: 35px;
+    height: 35px;
+  }
+
+  .slider .swiper-slide-prev, .slider .swiper-slide-next {
+    opacity: 0.6;
+  }
+}
+
+
+/*====　↑　swiper　====*/
+
+/* ========================================================
+ Youtube埋め込み
+ ======================================================== */
+
+.movie__item {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.movie__item iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ========================================================
+ INTERVIEW
+ ======================================================== */
+
+.intvArcTl {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3.2rem;
+}
+
+.intvArcTl .yaku {
+  font-weight: 100;
+  font-size: 2rem;
+  display: block;
+  line-height: 1;
+}
+
+.intvArcTl .keisho {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .intvArcTl {
+    font-size: 2.6rem;
+  }
+
+  .intvArcTl .yaku {
+    font-size: 1.6rem;
+  }
+
+  .intvArcTl .keisho {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+
+/* ========================================================
+ CSAT＆STAFF　CHART
+ ======================================================== */
+
+.boxHalf {
+  width: 48%;
+}
+
+.boxHalf a h2 {
+  color: #000;
+}
+
+
+
+/* ========================================================
+ Twitter　ウィジェット
+ ======================================================== */
+
+.twitter-timeline {
+  width: 70%;
+  overflow: auto;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .twitter-timeline {
+    width: 100%;
+    overflow: auto;
+    margin: 0 auto;
+  }
+}
+
+
+/* ========================================================
+ フジテレビュー
+ ======================================================== */
+
+.btn_fujitv-view {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+}
+
+.btn_fujitv-view a {
+  display: inline-block;
+  padding: 4px 10px;
+  color: white;
+  font-size: 90%;
+  font-weight: bold;
+  background-color: #3032b3;
+}
+
+.btn_fujitv-view a img {
+  display: inline-block;
+  width: 110px;
+  margin-left: 0.5em;
+  vertical-align: text-bottom;
+}
+
+.btn_fujitv-view a:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+  .btn_fujitv-view a img {
+    /* -----------★変更★-----------*/
+    width: 60px;
+  }
+}
+
+/* ========================================================
+ めざましmedia 2024/2/1 追加
+ ======================================================== */
+
+.btn_mezamashi-media {
+  display: block;
+  float: right;
+  margin: 0 10px 10px 0;
+}
+
+.btn_mezamashi-media a {
+  display: inline-block;
+  padding: 4px 10px;
+  color: #2FAEE5;
+  font-size: 90%;
+  font-weight: bold;
+  background-color: white;
+}
+
+.btn_mezamashi-media a img {
+  display: inline-block;
+  width: 110px;
+  margin-left: 0.5em;
+  vertical-align: text-bottom;
+}
+
+.btn_mezamashi-media a:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+  .btn_mezamashi-media a img {
+    width: 80px;
+  }
+}
+
+/* ========================================================
+ News list
+ TOPページ用ニュース一覧
+ ======================================================== */
+
+.news-list__item {
+  display: table;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.news-list__item:first-child {
+  padding-top: 0;
+}
+
+.news-list__item__photo {
+  display: table-cell;
+  width: 160px;
+  text-align: center;
+}
+
+.news-list__item__photo img {
+  max-width: 160px;
+  max-height: 100px;
+}
+
+.news-list__item__text {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 15px;
+  font-size: 1.5rem;
+}
+
+.news-list__item__text a {
+  color: #000;
+}
+
+.news-list__item__text a:hover {
+  text-decoration: underline;
+}
+
+.news-list__item__text time {
+  color: white;
+}
+
+.news-list__item__text em {
+  display: block;
+  font-weight: bold;
+}
+
+.news-list__more {
+  display: block;
+  float: right;
+  width: 200px;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: white;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.news-list__more:hover {
+  background: #ef85b1;
+  color: white;
+}
+
+
+/* ========================================================
+ Instagram
+ ======================================================== */
+
+.cx_instagram_target ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+}
+
+.cx_instagram_target ul li {
+  width: 33.333%;
+  background: white;
+  padding-right: 10px;
+}
+
+.cx_instagram_target ul li:nth-child(-n+3) {
+  margin-bottom: 10px;
+}
+
+.img_wrap {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+.img_wrap img {
+  position: absolute;
+  max-width: none;
+  height: auto;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+li.horizontally-long .img_wrap img {
+  height: 100%;
+  width: auto;
+}
+
+.instgarmaBox {
+  padding: 0;
+  overflow: hidden;
+}
+
+.instgarmaBox+.linkBtn {
+  margin-top: -20px;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////
+ Contents
+ ニュース、ストーリー、ギャラリー、キャスト＆スタッフ、インタビュー等
+/////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ========================================================
+  Introduction
+ ======================================================== */
+
+.introduction h3 {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .introduction h3 {
+    /* -----------★変更★-----------*/
+    font-size: 1.6rem;
+    line-height: 1.7;
+  }
+}
+
+/* ========================================================
+  Cast & Staff
+ ======================================================== */
+
+.cast-staff h3 {
+  font-size: 2.6rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cast-list dl {
+  display: table;
+  width: 100%;
+  margin: 0px auto 15px auto;
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+.cast-list dt {
+  display: table-cell;
+  width: 47%;
+  text-align: right;
+}
+
+.cast-list dd {
+  display: table-cell;
+  width: 53%;
+  text-align: left;
+}
+
+.cast-list dd:before {
+  content: '…';
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.cast-list p {
+  text-align: center;
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.staffList_box dt {
+  font-weight: bold;
+  font-size: 1.2em;
+  width: 100%;
+  display: inline-block;
+  padding: 0px 0 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.staffList_box dd {
+  font-size: 1.4em;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  margin-bottom: 30px;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  font-weight: bold;
+  text-align: center;
+}
+
+.staffList_box dd cite {
+  font-size: 0.7em;
+  display: block;
+  font-weight: 100;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .cast-staff h3, .cast-list dl {
+    font-size: 1.8rem;
+  }
+
+  .cast-list dt {
+    display: table-cell;
+    width: 44.4%;
+    text-align: right;
+  }
+
+  .cast-list p {
+    font-size: 1.4rem;
+  }
+
+  .staffList_box dt {
+    font-size: 1.4rem;
+  }
+
+  .staffList_box dd {
+    font-size: 1.8rem;
+    padding: 0;
+  }
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////
+ Module
+ 写真、バックナンバー、SNSボタン、動画配信（TVer・FOD）バナー、PC/SP切替等汎用パーツ
+/////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ========================================================
+  Photo
+ ======================================================== */
+
+.photo-2 {
+  margin: 0 -.5%;
+}
+
+.photo-2 img {
+  float: left;
+  width: 49%;
+  margin: .5%;
+}
+
+.photo-3 {
+  margin: 0 -.5%;
+}
+
+.photo-3 img {
+  float: left;
+  width: 32.3333333%;
+  margin: .5%;
+}
+
+@media screen and (max-width: 768px) {
+  .photo-1 img, .photo-2 img, .photo-3 img {
+    width: 100%;
+    margin: 6px 0;
+  }
+}
+
+/* ========================================================
+  Backnumber
+ ======================================================== */
+
+.backnumber {
+  margin: 30px auto;
+}
+
+.backnumber__list--img {
+  margin: 0 -1%;
+}
+
+.backnumber__list--img a {
+  text-decoration: none;
+}
+
+.backnumber__list--img a:hover {
+  opacity: .8;
+}
+
+.backnumber__list--img li {
+  width: 25%;
+  padding: 0 5px;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  margin-bottom: 10px;
+}
+
+.backnumber__list--img li .text {
+  padding: 5px;
+  text-align: center;
+  color: #222;
+  text-decoration: none;
+  background: #f9cade;
+}
+
+.backnumber__list--text {
+  margin: 15px;
+}
+
+.backnumber__list--text li {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.backnumber__list--text a {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: white;
+  border: 1px solid #f9cade;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #000;
+}
+
+.backnumber__list--text a time {
+  display: block;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.backnumber__list--text a:hover {
+  background: #fef8fb;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .backnumber__list--img li {
+    width: 33.3333%;
+  }
+}
+
+
+
+
+/* ========================================================
+  動画配信（TVer・FOD）バナー
+ ======================================================== */
+
+.s-bnr--top {
+  padding: 25px 0;
+}
+
+.s-bnr--top li {
+  width: 48.5%;
+}
+
+.s-bnr a {
+  margin: auto;
+}
+
+.s-bnr a:hover {
+  opacity: 0.6;
+}
+
+.s-bnr__item+.s-bnr__item {
+  margin-top: 26px;
+}
+
+@media screen and (max-width: 1000px) {
+  .s-bnr--top {
+    padding: 25px 2%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .s-bnr--top {
+    padding: 20px 10px;
+    display: block;
+  }
+
+  .s-bnr--top li {
+    width: 100%;
+  }
+
+  .s-bnr--top li:first-of-type {
+    margin-bottom: 10px;
+  }
+}
+
+
+/* ========================================================
+  PC/SP 切替表示
+ ======================================================== */
+
+
+/* PCのみ適用 */
+
+.pc-only {
+  display: block !important;
+}
+
+.sp-only {
+  display: none !important;
+}
+
+
+/* SPのみ適用 */
+
+@media screen and (max-width: 768px) {
+  .pc-only {
+    display: none !important;
+  }
+
+  .sp-only {
+    display: block !important;
+  }
+}

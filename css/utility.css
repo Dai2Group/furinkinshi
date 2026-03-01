@@ -1,0 +1,478 @@
+@charset "UTF-8";
+
+/* ========================================================
+ UTILITTY
+ ** 汎用クラス
+ ======================================================== */
+@font-face {
+  font-family: 'A-OTF-RyuminPro-Regular';
+  src: url('../fonts/A-OTF-RyuminPro-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+}
+
+/*
+右寄せ＆左寄せ
+_________________________________________________________*/
+.a-center {
+  text-align: center;
+}
+
+.a-right {
+  text-align: right;
+}
+
+.a-left {
+  text-align: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.r-left {
+  float: left;
+}
+
+/*
+マージン＆パディング
+_________________________________________________________*/
+.mb-100 {
+  margin-bottom: 10rem !important;
+}
+
+.mt-100 {
+  margin-top: 10rem !important;
+}
+
+.pb-100 {
+  padding-bottom: 10rem !important;
+}
+
+.pt-100 {
+  padding-top: 10rem !important;
+}
+
+.mb-95 {
+  margin-bottom: 9.5rem !important;
+}
+
+.mt-95 {
+  margin-top: 9.5rem !important;
+}
+
+.pb-95 {
+  padding-bottom: 9.5rem !important;
+}
+
+.pt-95 {
+  padding-top: 9.5rem !important;
+}
+
+.mb-90 {
+  margin-bottom: 9rem !important;
+}
+
+.mt-90 {
+  margin-top: 9rem !important;
+}
+
+.pb-90 {
+  padding-bottom: 9rem !important;
+}
+
+.pt-90 {
+  padding-top: 9rem !important;
+}
+
+.mb-85 {
+  margin-bottom: 8.5rem !important;
+}
+
+.mt-85 {
+  margin-top: 8.5rem !important;
+}
+
+.pb-85 {
+  padding-bottom: 8.5rem !important;
+}
+
+.pt-85 {
+  padding-top: 8.5rem !important;
+}
+
+.mb-80 {
+  margin-bottom: 8rem !important;
+}
+
+.mt-80 {
+  margin-top: 8rem !important;
+}
+
+.pb-80 {
+  padding-bottom: 8rem !important;
+}
+
+.pt-80 {
+  padding-top: 8rem !important;
+}
+
+.mb-75 {
+  margin-bottom: 7.5rem !important;
+}
+
+.mt-75 {
+  margin-top: 7.5rem !important;
+}
+
+.pb-75 {
+  padding-bottom: 7.5rem !important;
+}
+
+.pt-75 {
+  padding-top: 7.5rem !important;
+}
+
+.mb-70 {
+  margin-bottom: 7rem !important;
+}
+
+.mt-70 {
+  margin-top: 7rem !important;
+}
+
+.pb-70 {
+  padding-bottom: 7rem !important;
+}
+
+.pt-70 {
+  padding-top: 7rem !important;
+}
+
+.mb-65 {
+  margin-bottom: 6.5rem !important;
+}
+
+.mt-65 {
+  margin-top: 6.5rem !important;
+}
+
+.pb-65 {
+  padding-bottom: 6.5rem !important;
+}
+
+.pt-65 {
+  padding-top: 6.5rem !important;
+}
+
+.mb-60 {
+  margin-bottom: 6rem !important;
+}
+
+.mt-60 {
+  margin-top: 6rem !important;
+}
+
+.pb-60 {
+  padding-bottom: 6rem !important;
+}
+
+.pt-60 {
+  padding-top: 6rem !important;
+}
+
+.mb-55 {
+  margin-bottom: 5.5rem !important;
+}
+
+.mt-55 {
+  margin-top: 5.5rem !important;
+}
+
+.pb-55 {
+  padding-bottom: 5.5rem !important;
+}
+
+.pt-55 {
+  padding-top: 5.5rem !important;
+}
+
+.mb-50 {
+  margin-bottom: 5rem !important;
+}
+
+.mt-50 {
+  margin-top: 5rem !important;
+}
+
+.pb-50 {
+  padding-bottom: 5rem !important;
+}
+
+.pt-50 {
+  padding-top: 5rem !important;
+}
+
+.mb-45 {
+  margin-bottom: 4.5rem !important;
+}
+
+.mt-45 {
+  margin-top: 4.5rem !important;
+}
+
+.pb-45 {
+  padding-bottom: 4.5rem !important;
+}
+
+.pt-45 {
+  padding-top: 4.5rem !important;
+}
+
+.mb-40 {
+  margin-bottom: 4rem !important;
+}
+
+.mt-40 {
+  margin-top: 4rem !important;
+}
+
+.pb-40 {
+  padding-bottom: 4rem !important;
+}
+
+.pt-40 {
+  padding-top: 4rem !important;
+}
+
+.mb-35 {
+  margin-bottom: 3.5rem !important;
+}
+
+.mt-35 {
+  margin-top: 3.5rem !important;
+}
+
+.pb-35 {
+  padding-bottom: 3.5rem !important;
+}
+
+.pt-35 {
+  padding-top: 3.5rem !important;
+}
+
+.mb-30 {
+  margin-bottom: 3rem !important;
+}
+
+.mt-30 {
+  margin-top: 3rem !important;
+}
+
+.pb-30 {
+  padding-bottom: 3rem !important;
+}
+
+.pt-30 {
+  padding-top: 3rem !important;
+}
+
+.mb-25 {
+  margin-bottom: 2.5rem !important;
+}
+
+.mt-25 {
+  margin-top: 2.5rem !important;
+}
+
+.pb-25 {
+  padding-bottom: 2.5rem !important;
+}
+
+.pt-25 {
+  padding-top: 2.5rem !important;
+}
+
+.mb-20 {
+  margin-bottom: 2rem !important;
+}
+
+.mt-20 {
+  margin-top: 2rem !important;
+}
+
+.pb-20 {
+  padding-bottom: 2rem !important;
+}
+
+.pt-20 {
+  padding-top: 2rem !important;
+}
+
+.mb-15 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mt-15 {
+  margin-top: 1.5rem !important;
+}
+
+.pb-15 {
+  padding-bottom: 1.5rem !important;
+}
+
+.pt-15 {
+  padding-top: 1.5rem !important;
+}
+
+.mb-10 {
+  margin-bottom: 1rem !important;
+}
+
+.mt-10 {
+  margin-top: 1rem !important;
+}
+
+.pb-10 {
+  padding-bottom: 1rem !important;
+}
+
+.pt-10 {
+  padding-top: 1rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mt-5 {
+  margin-top: 0.5rem !important;
+}
+
+.pb-5 {
+  padding-bottom: 0.5rem !important;
+}
+
+.pt-5 {
+  padding-top: 5rem !important;
+}
+
+/*
+文字サイズ
+_________________________________________________________*/
+.fs-40 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 4rem;
+  color: white;
+}
+
+.fs-38 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 3.8rem;
+  color: white;
+
+}
+
+.fs-36 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 3.6rem;
+  color: white;
+}
+
+.fs-34 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 3.4rem;
+  color: white;
+}
+
+.fs-32 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 3.2rem;
+  color: white;
+}
+
+.fs-30 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 3rem;
+  color: white;
+}
+
+.fs-28 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 2.8rem;
+  color: white;
+}
+
+.fs-26 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 2.6rem;
+  color: white;
+}
+
+.fs-24 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 2.4rem;
+  color: white;
+}
+
+.fs-22 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 2.2rem;
+  color: white;
+}
+
+.fs-20 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 2rem;
+  color: white;
+}
+
+.fs-18 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 1.8rem;
+  color: white;
+}
+
+.fs-16 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 1.6rem;
+  color: white;
+}
+
+.fs-14 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 1.4rem;
+  color: white;
+}
+
+.fs-12 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 1.2rem;
+  color: white;
+}
+
+.fs-10 {
+  font-family: "A-OTF-RyuminPro-Regular";
+  font-size: 1rem;
+  color: white;
+}
+
+/*
+状態
+_________________________________________________________*/
+.is-none {
+  display: none;
+}
