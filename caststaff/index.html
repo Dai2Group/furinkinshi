@@ -32,18 +32,19 @@
   <title>不倫禁止 | introduction - フジテレビ</title>
   <!--↑制作者 head挿入・修正エリア-->
 
-  <!-- ↓フジテレビ共通CSS設定 -->
+  <!-- フジテレビ共通設定 -->
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="//www.fujitv.co.jp/common/css/pg_default.css">
   <link rel="stylesheet" href="//www.fujitv.co.jp/common/css/aside.css">
   <script type="text/javascript" src="//www.fujitv.co.jp/js/fujimenu.js"></script>
-  <!-- ↑フジテレビ共通CSS設定 -->
-
-  <!-- ↓番組CSS設定 -->
-  <link rel="stylesheet" href="../css/drama_template.css">
-  <link rel="stylesheet" href="../css/utility.css">
-  <!-- ↑番組CSS設定 -->
-
+  <!-- フジテレビ共通設定 -->
+  <!-- dramaTenplate CSS -->
+  <link rel="stylesheet" href="../css/drama_template.css" />
+  <link rel="stylesheet" href="../css/utility.css" />
+  <link rel="stylesheet" href="../css/update.css" />
+  <link rel="stylesheet" href="../css/cx-mezamashi-media-feed.css">
+  <link rel="stylesheet" href="../css/swiper.min.css">
+  <!-- dramaTenplate CSS -->
 </head>
 
 <body oncontextmenu="return false;">
@@ -57,7 +58,7 @@
       <div id="pc-bg" class="top">
         <div id="fp-wrap">
           <div id="fp-contents">
-            <!-- ↓制作者 コンテンツエリア-->
+            <!--↓制作者 コンテンツエリア-->
             <header class="l-mainvisual">
               <div class="inner">
                 <div class="mainvisual">
@@ -128,39 +129,57 @@
         </div><!-- /fp-wrap -->
       </div><!-- /pc-bg -->
 
-      <!-- ↓共通エリア-->
-      <!-- ↓共通エリア番組用-->
-      <!-- <section id="contents-aside">
+      <!--↓共通エリア-->
+      <section id="contents-aside">
         <aside-contents-premium></aside-contents-premium>
-      </section> -->
-      <!-- ↑共通エリア番組用-->
+      </section>
 
-      <!-- ↓共通エリア番組以外用-->
-      <!-- <section id="fp-aside">
+      <section id="fp-aside">
         <aside-fp-premium></aside-fp-premium>
-      </section> -->
-      <!-- ↑共通エリア番組以外用-->
+      </section>
 
-      <!-- ↓標準フッター-->
       <script type="text/javascript">fujimenu.writeGbfooter();</script>
-      <!-- ↑標準フッター-->
     </div>
   </div>
-  <!-- ↑共通エリア-->
+  <!--↑共通エリア-->
 
-  <!-- ↓共通エリアJavaScript記述エリア-->
-  <script type="text/javascript" src="/common/js/cx_aside_premium.js"></script>
+  <!--↓制作者 JavaScript記述エリア-->
+  <script type="text/javascript" src="//www.fujitv.co.jp/common/js/cx_aside_premium.js"></script>
+  <script type="text/javascript" src="//www.fujitv.co.jp/common/js/libs/jquery/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="//www.fujitv.co.jp/common/js/cx_video.js"></script>
+  <script type="text/javascript" src="//www.fujitv.co.jp/common/js/cx_instagram.js"></script>
+  <script type="text/javascript" src="//www.fujitv.co.jp/common/js/cx_mezamashi_media_feed.js"></script>
   <script type="text/javascript">
     fujitv.addEventFunc(window, "load", function () { fujitv.imgProtect(".cx_imgProtect"); });
     fujitv.addPagetopBtn("#000000");
   </script>
-  <!-- ↑共通エリアJavaScript記述エリア-->
 
-  <!-- ↓制作者 JavaScript記述エリア-->
-  <script type="text/javascript" src="//www.fujitv.co.jp/common/js/libs/jquery/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="//www.fujitv.co.jp/common/js/cx_video.js"></script>
-  <script type="text/javascript" src="//www.fujitv.co.jp/common/js/cx_instagram.js"></script>
-  <!-- ↑制作者 JavaScript記述エリア-->
+  <!-- swiper script -->
+  <script src="js/swiper.min.js"></script>
+  <script>
+    let slider1 = new Swiper('#what-is-new.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+      },
+      slidesPerView: 1.3,
+      watchOverflow: true,
+      spaceBetween: 8,
+      centeredSlides: true,//1枚目のスライド中央配置
+      breakpoints: {
+        // スライドの表示枚数：769px以上の場合
+        769: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          watchOverflow: true,
+          spaceBetween: 8,
+          centeredSlides: false,
+        },
+      },
+    })
+  </script>
+  <!-- /swiper script -->
+  <!--↑制作者 JavaScript記述エリア-->
 
 </body>
 

@@ -7,24 +7,30 @@
 .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel {
   width: 88%;
 }
+
 /* カルーセルスライド */
 .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel-item {
   padding: 16px;
-  background-color: #f2f2f2; /* スライド背景色変更の場合はここを変更 */
+  background-color: #f2f2f2;
+  /* スライド背景色変更の場合はここを変更 */
   height: auto;
 }
+
 /* スライド内リンクエリア */
 .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel-item-link {
   height: 100%;
   text-decoration: none;
 }
+
 .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel-item-link:hover {
   text-decoration: underline;
 }
+
 /* スライド内画像エリア */
 .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel-item-img {
   margin: 0;
 }
+
 /* スライド内 img */
 .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel-item-img img {
   max-width: 100%;
@@ -32,16 +38,19 @@
   box-sizing: border-box;
   object-fit: contain;
 }
+
 /* スライド内日付 */
 .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel-item-date {
   display: inline-block;
   margin: 5px 0 0 0;
   color: #4e4e4e;
 }
+
 /* スライド内テキスト */
 .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel-item-text {
   margin: 5px 0;
 }
+
 /* ナビゲーション共通 */
 .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel-navi {
   position: absolute;
@@ -52,18 +61,22 @@
   cursor: pointer;
   z-index: 1;
 }
+
 /* ナビゲーション 前後のスライドがない場合のprev、nextボタンの表示制御 */
 .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel-navi.swiper-button-disabled {
   opacity: 0;
 }
+
 /* ナビゲーション prev */
 .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel-prev {
   left: 18px;
 }
+
 /* ナビゲーション next */
 .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel-next {
   right: 18px;
 }
+
 /* ナビゲーション SVGアイコン */
 .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel-navi .icon_svg {
   width: 100%;
@@ -96,6 +109,7 @@
   .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel {
     width: 100%;
   }
+
   /* 前後のスライドを薄く */
   .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel-item.swiper-slide-next,
   .cx-mezamashi-media-feed-carousel-container .cx-mezamashi-media-feed-carousel-item.swiper-slide-prev {

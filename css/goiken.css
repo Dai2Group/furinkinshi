@@ -1,80 +1,137 @@
 @charset "UTF-8";
 
-body,div,td,p,ul,ol,dl,dt,dd,img,form,h1,h2,h3,h4,h5,hr{margin:0;padding: 0;border: none;font-style: normal;text-align: left;word-break:break-all;}
+body, div, td, p, ul, ol, dl, dt, dd, img, form, h1, h2, h3, h4, h5, hr {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	text-align: left;
+	word-break: break-all;
+}
 
 body {
-	font-family: "メイリオ","Meiryo","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
-	font-size:14px;
-	line-height:1.6;
-	color:#444;
-	text-align:center;
-	background:#f9ede9;
+	font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+	font-size: 14px;
+	line-height: 1.6;
+	color: #444;
+	text-align: center;
+	background: #f9ede9;
 	-webkit-text-size-adjust: 100%;
-	overflow-x:hidden;
-	background:none;
+	overflow-x: hidden;
+	background: none;
 }
- 
+
 /* ------------------------------
   全体
 ------------------------------ */
 
 #goiken-all {
-    width: 100%;
-    max-width: 550px;
-    margin: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
+	width: 100%;
+	max-width: 550px;
+	margin: auto;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	padding-left: 15px;
 	padding-right: 15px;
 }
 
-#goiken-all > div { margin-bottom:1.43em;}
-#goiken-all > div:after { content:""; display:block; clear:both;}
+#goiken-all>div {
+	margin-bottom: 1.43em;
+}
 
-#goiken-all p { margin: 0 0.8em;}
+#goiken-all>div:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#goiken-all p {
+	margin: 0 0.8em;
+}
 
 
 /* ------------------------------
   各メッセージ部分
 ------------------------------ */
 
-#goiken-all dl{ margin-bottom: 1.43em; border: 1px solid #c9c2c2; box-shadow: 0 1px 1px #c9c2c2; background: #fff;}
+#goiken-all dl {
+	margin-bottom: 1.43em;
+	border: 1px solid #c9c2c2;
+	box-shadow: 0 1px 1px #c9c2c2;
+	background: #fff;
+}
 
 /* タイトル */
-#goiken-all dl dt { font-weight: bolder; padding: .6em .8em .4em; border-bottom: 1px dotted #c9c2c2; background-color: #dadada; line-height: 1; }
+#goiken-all dl dt {
+	font-weight: bolder;
+	padding: .6em .8em .4em;
+	border-bottom: 1px dotted #c9c2c2;
+	background-color: #dadada;
+	line-height: 1;
+}
 
 /* 本文 */
-#goiken-all dl dd { padding: .6em .8em 0;}
-#goiken-all dl dd p { font-size: .86em; text-align: right; line-height: 2; }
-#goiken-all dl dd p span { color: #999 }
+#goiken-all dl dd {
+	padding: .6em .8em 0;
+}
+
+#goiken-all dl dd p {
+	font-size: .86em;
+	text-align: right;
+	line-height: 2;
+}
+
+#goiken-all dl dd p span {
+	color: #999
+}
 
 /* 最下部メッセージ */
-#goiken-all dl.notify { border: 1px solid #222; border-radius: 6px; color: #444; box-shadow: none;}
-#goiken-all dl.notify dt { background-color: #222; color: #fff; border: none; border-radius: 3px 3px 0 0;}
-#goiken-all dl.notify dd { font-size: .86em; padding: .71em 0; text-align: center; }
+#goiken-all dl.notify {
+	border: 1px solid #222;
+	border-radius: 6px;
+	color: #444;
+	box-shadow: none;
+}
+
+#goiken-all dl.notify dt {
+	background-color: #222;
+	color: #fff;
+	border: none;
+	border-radius: 3px 3px 0 0;
+}
+
+#goiken-all dl.notify dd {
+	font-size: .86em;
+	padding: .71em 0;
+	text-align: center;
+}
 
 
 /* ------------------------------
   「次のメッセージ>>」部分
 ------------------------------ */
 
-#goiken-all #next{
-	text-align:right;
+#goiken-all #next {
+	text-align: right;
 }
-#goiken-all #next a:link{
-	color:#FFF;
-	fontsize:12px;
-    font-weight: bold;
-	text-decoration:underline;
+
+#goiken-all #next a:link {
+	color: #FFF;
+	fontsize: 12px;
+	font-weight: bold;
+	text-decoration: underline;
 }
-#goiken-all #next a:hover{
-	text-decoration:none;
+
+#goiken-all #next a:hover {
+	text-decoration: none;
 }
-#goiken-all #next a:active{
-	text-decoration:none;
+
+#goiken-all #next a:active {
+	text-decoration: none;
 }
-#goiken-all #next a:visited{
-	text-decoration:underline;
+
+#goiken-all #next a:visited {
+	text-decoration: underline;
 }
 
 
@@ -82,35 +139,47 @@ body {
 
 /********** for Smartphone **********/
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
-/* ------------------------------
+	/* ------------------------------
   全体
 ------------------------------ */
 	#goiken-all {
 		width: 90%;
-    	padding: 2em 0 2em;
+		padding: 2em 0 2em;
 		font-size: 100% !important;
 	}
 
-	#goiken-all dl dd p span {display: block; margin-right: .6em; margin-bottom: .6em; line-height: 1;}
+	#goiken-all dl dd p span {
+		display: block;
+		margin-right: .6em;
+		margin-bottom: .6em;
+		line-height: 1;
+	}
 
-/* ------------------------------
+	/* ------------------------------
   各メッセージ部分
 ------------------------------ */
 
-	#goiken-all dl.notify dt { text-align:center; padding:.4em .8em;}
-	#goiken-all dl.notify dd { text-align:left; padding:.71em;}
+	#goiken-all dl.notify dt {
+		text-align: center;
+		padding: .4em .8em;
+	}
+
+	#goiken-all dl.notify dd {
+		text-align: left;
+		padding: .71em;
+	}
 
 
 	/* android textbr */
 	#fp-hdr h1,
-	#goiken-all > div p,
-	#goiken-all > div h4,
+	#goiken-all>div p,
+	#goiken-all>div h4,
 	#goiken-all dl dd,
 	#fp-ftr #copyRight1,
-	#fp-ftr #copyRight2{
+	#fp-ftr #copyRight2 {
 		background: url("/common/images/space.gif");
 	}
-	
+
 }

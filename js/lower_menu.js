@@ -1,0 +1,15 @@
+document.write('<div class="inner">');
+document.write('<ul class="menu menu--4 menu--sp2 clearfix">');
+document.write('  <li class="menu__item nav-intro">');
+document.write('    <a href="../introduction/index.html">イントロダクション</a>');
+document.write('  </li>');
+document.write('  <li class="menu__item nav-story">');
+document.write('    <a href="../story/index.html">ストーリー</a>');
+document.write('  </li>');
+document.write('  <li class="menu__item nav-caststaff">');
+document.write('    <a href="../cast-staff/index.html">キャスト＆スタッフ</a>');
+document.write('  </li>');
+document.write('  <li class="menu__item nav-chart">');
+document.write('    <a href="../chart/index.html">相関図</a>');
+document.write('  </li>');
+document.write('  </div>');
