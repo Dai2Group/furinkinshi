@@ -27,7 +27,7 @@ body {
 
 @media screen and (max-width: 768px) {
   html {
-    font-size: 40%;
+    font-size: 60%;
   }
 
   body {
@@ -251,7 +251,7 @@ a {
 }
 
 .menu--4.menu--sp2 .menu__item.nav-intro a {
-  background-image: url(../photo/furinkinshi_nav_introduction.png);
+  background-image: url(../photo/furinkinshi_nav_introduction_pc.png);
 }
 
 .menu--4.menu--sp2 .menu__item.nav-intro a:hover {
@@ -259,7 +259,7 @@ a {
 }
 
 .menu--4.menu--sp2 .menu__item.nav-story a {
-  background-image: url(../photo/furinkinshi_nav_story.png);
+  background-image: url(../photo/furinkinshi_nav_story_pc.png);
 }
 
 .menu--4.menu--sp2 .menu__item.nav-story a:hover {
@@ -267,7 +267,7 @@ a {
 }
 
 .menu--4.menu--sp2 .menu__item.nav-chart a {
-  background-image: url(../photo/furinkinshi_nav_chart.png);
+  background-image: url(../photo/furinkinshi_nav_chart_pc.png);
 }
 
 .menu--4.menu--sp2 .menu__item.nav-chart a:hover {
@@ -275,7 +275,7 @@ a {
 }
 
 .menu--4.menu--sp2 .menu__item.nav-caststaff a {
-  background-image: url(../photo/furinkinshi_nav_caststaff.png);
+  background-image: url(../photo/furinkinshi_nav_caststaff_pc.png);
 }
 
 .menu--4.menu--sp2 .menu__item.nav-caststaff a:hover {
@@ -388,6 +388,22 @@ a {
     display: block;
     font-size: 1rem;
   }
+
+  .menu--4.menu--sp2 .menu__item.nav-intro a {
+    background-image: url(../photo/furinkinshi_nav_introduction_sp.png);
+  }
+
+  .menu--4.menu--sp2 .menu__item.nav-story a {
+    background-image: url(../photo/furinkinshi_nav_story_sp.png);
+  }
+
+  .menu--4.menu--sp2 .menu__item.nav-chart a {
+    background-image: url(../photo/furinkinshi_nav_chart_sp.png);
+  }
+
+  .menu--4.menu--sp2 .menu__item.nav-caststaff a {
+    background-image: url(../photo/furinkinshi_nav_caststaff_sp.png);
+  }
 }
 
 
@@ -464,6 +480,14 @@ a {
   background-size: cover;
 }
 
+.content__img_pc {
+  display: inline;
+}
+
+.content__img_sp {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .contents_update {
     /* -----------★変更★-----------*/
@@ -488,8 +512,12 @@ a {
     padding-bottom: 2rem;
   }
 
-  .content__img {
-    width: 200px;
+  .content__img_pc {
+    display: none;
+  }
+
+  .content__img_sp {
+    display: inline;
   }
 }
 
