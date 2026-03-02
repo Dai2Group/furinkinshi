@@ -177,12 +177,10 @@ a {
   Menu
  ======================================================== */
 .pc_chain {
-  padding: 10px 0;
   display: block;
 }
 
 .sp_chain {
-  padding: 10px 0;
   display: none;
 }
 
@@ -232,7 +230,7 @@ a {
 
 .menu--4.menu--sp2 .menu__item {
   width: 25%;
-  height: 100px;
+  height: 150px;
 }
 
 .menu--4.menu--sp2 .menu__item a {
@@ -341,29 +339,32 @@ a {
 
   .menu--4.menu--sp2 .menu__item {
     /* -----------★変更★-----------*/
-    width: 46%;
-    height: 80px;
-    margin: 0 2%;
+    width: 45%;
+    height: 68px;
   }
 
   .menu--4.menu--sp2 .menu__item:first-child {
     border-top: 0;
     border-left: 0;
+    margin-left: 5%;
   }
 
   .menu--4.menu--sp2 .menu__item:nth-child(2) {
     border-top: 0;
     border-right: 0;
+    margin-right: 5%;
   }
 
   .menu--4.menu--sp2 .menu__item:nth-child(3) {
     border-bottom: 0;
     border-left: 0;
+    margin-left: 5%;
   }
 
   .menu--4.menu--sp2 .menu__item:nth-child(4) {
     border-bottom: 0;
     border-right: 0;
+    margin-right: 5%;
   }
 
   .menu--2.menu--sp1 .menu__item {
