@@ -202,10 +202,6 @@ a {
   opacity: 0.6 !important;
 }
 
-.l-menu {
-  background: #1a1a1a;
-}
-
 .menu {
   display: flex;
   justify-content: center;
@@ -345,13 +341,9 @@ a {
 
   .menu--4.menu--sp2 .menu__item {
     /* -----------★変更★-----------*/
-    width: 50%;
+    width: 46%;
     height: 80px;
-  }
-
-  .menu--4.menu--sp2 .menu__item a {
-    /* -----------★変更★-----------*/
-    background-size: 160px;
+    margin: 0 2%;
   }
 
   .menu--4.menu--sp2 .menu__item:first-child {
